@@ -71,7 +71,7 @@ fun TaretaDePresentacion(){
                         Text(
                             modifier = Modifier.padding(vertical = 16.dp),
                             text = "Tomás Poveda Trujillo ",
-                            fontSize = 16.sp,
+                            fontSize = 20.sp,
                             fontWeight = FontWeight.Bold,
                             color = Color.DarkGray
                         )
@@ -112,15 +112,17 @@ fun TaretaDePresentacion(){
                 Column(modifier = Modifier.padding(16.dp)) {
                     Acordeon(
                         "Biografia",
-                        "Naci el 11 de Octubre del 2005,Vivo en cajicá Colombia. Actual mente vivo con mis padres, mi hermana y mi perrita"
+                        "Nacido el 11 de Octubre del 2005,reside en Cajicá"
                     )
                     Spacer(modifier = Modifier.height(8.dp))
                     Acordeon(
                         "Estudios",
-                        "",
+                        "Entre los estudios se encuantran",
                         listOf(
                             "Primaria en el colegio Soto Mayór",
-                            "Graduado de Secundaria con "
+                            "Graduado de Secundaria con tecnico en instalación y mantenimiento de material industrial(sena) ",
+                            "Actualmente realizando un pregrado en ingenieria de sistemas y computación en la universidad de cundinamarca (extención chia)"
+
                         )
                     )
                     Spacer(modifier = Modifier.height(8.dp))
@@ -154,7 +156,22 @@ fun TaretaDePresentacion(){
                     Spacer(modifier = Modifier.height(8.dp))
                     Acordeon(
                         "Deportes",
-                        "Casi no soy dedicado al deporte pero normalmente el que más suelo hacer es ciclismo"
+                        "Ha realizado multiples de portes en los que se encuentran",
+                        listOf(
+                            "Ciclismo",
+                            "Natación",
+                            "Taekwondo",
+                            "Tenis",
+                            "Baloncesto",
+                            "Futbol"
+                        ),
+                        listOf(
+                            "https://umamexico.com/wp-content/uploads/2018/04/bodqueSanLucas.jpg",
+                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAvBswabIcX9JAJJUs0UcSkJffnWkmGAIt5w&s",
+                            "https://media.gq.com.mx/photos/61338d4d10757bfa84db816c/master/pass/taekwondo.jpg",
+                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-pLYAW5UhiCfy3QsslHpeD2LaKh_DUEY2Mw&s",
+                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW6yvEoH76EHTNVqu3nHtZE35IynNfFdm17A&s",
+                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROuJIoufr72wL8dh0cUshKJb-m0p0xyLLhtw&s")
 
                     )
                     Spacer(modifier = Modifier.height(8.dp))
@@ -165,7 +182,13 @@ fun TaretaDePresentacion(){
                             "El café de calidad",
                             "Los Animales ",
                             "La Tecnologia"
-                        )
+                        ),
+                        listOf(
+                            "https://coycoacademia.com/wp-content/uploads/2024/04/tendencias-barismo-2024-1.jpg",
+                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdEz1gmQz52Ve2d6emvU_455r22d6X4VlcDg&s",
+                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlZWS4D8bkxRd3sMjza8fzi_bXAfP6isJcww&s",
+                            "https://www.yarquitectura.com/wp-content/uploads/2023/06/que-es-arquitectura-de-computadoras.jpg",
+                            "https://as2.ftcdn.net/jpg/04/75/87/35/1000_F_475873501_PRn6k6DlVIBy3vUbIcnc6INGCZVbdGSy.jpg")
                     )
                 }
 
@@ -187,10 +210,12 @@ fun Acordeon(titulo: String,contenido:String,lista: List<String> = emptyList(), 
                 text=titulo,
                 modifier = Modifier.weight(1f),
                 fontWeight = FontWeight.Bold,
-                color = Color.DarkGray
+                color = Color.DarkGray,
+                fontSize = 20.sp
             )
             Text(
-                text= if (expanded) "▲" else "▼"
+                text= if (expanded) "▲" else "▼",
+                fontSize = 20.sp
             )
         }
 
@@ -200,18 +225,19 @@ fun Acordeon(titulo: String,contenido:String,lista: List<String> = emptyList(), 
                     textAlign = TextAlign.Justify,
                 modifier = Modifier.padding(top= 8.dp)
                     .fillMaxWidth(),
-                color = Color.Gray)
+                color = Color.DarkGray)
                 if (lista.isNotEmpty()){
                     Spacer(modifier = Modifier.height(8.dp))
                     lista.forEach { item ->
                         Row(modifier = Modifier.padding(vertical = 2.dp)){
                             Text(
-                                color = Color.Red,
-                                text = "♠")
+                                text = "♠",
+                                fontSize = 16.sp)
                             Text(
                                 item,
                                 textAlign = TextAlign.Justify,
-                                color = Color.DarkGray)
+                                color = Color.DarkGray,
+                                fontSize = 16.sp)
                         }
                     }
 
